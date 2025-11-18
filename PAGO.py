@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image, ImageDraw, ImageFont
 
 st.title("Generador de formato DAP")
-st.subtitle("Barrio Colinas")
+st.title("Barrio Colinas")
 # Textarea más grande
 texto = st.text_area("Pega aquí el texto", height=230)
 

@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st 
 from PIL import Image, ImageDraw, ImageFont
 
 st.title("Generador de formato BBVA")
@@ -18,18 +18,20 @@ if texto.strip():
         nombre = lineas[3]         # Fila 4
         monto = lineas[-1]         # Última fila
 
+        # Fuente compatible con acentos
+        font = ImageFont.truetype("DejaVuSans.ttf", 18)
+
         # Crear imagen
         img = Image.new("RGB", (800, 400), color="white")
         draw = ImageDraw.Draw(img)
-        font = ImageFont.load_default()
 
-        draw.text((50, 30), "Formato para cobrar ordenes de pago BBVA (Cobro de SIT)", font=font, fill="black")
+        draw.text((50, 30), "Formato para cobrar órdenes de pago BBVA (Cobro de SIT)", font=font, fill="black")
         draw.text((50, 80), f"Nombre: {nombre}", font=font, fill="black")
         draw.text((50, 120), "Convenio SIT: 1215442", font=font, fill="black")
         draw.text((50, 160), f"Concepto: {concepto}", font=font, fill="black")
         draw.text((50, 200), f"Referencia: {concepto}", font=font, fill="black")
         draw.text((50, 240), f"{monto}", font=font, fill="black")
-        draw.text((50, 280), "*Favor de llevar su identificación oficial*", font=font, fill="black")
+        draw.text((50, 280), "• Favor de llevar su identificación oficial •", font=font, fill="black")
 
         st.image(img)
 else:

@@ -4,7 +4,7 @@ from PIL import Image, ImageDraw, ImageFont
 st.title("Generador de formato BBVA")
 
 # Textarea más grande
-texto = st.text_area("Pega aquí el texto", height=300)
+texto = st.text_area("Pega aquí el texto", height=250)
 
 # Solo generar si hay texto
 if texto.strip():

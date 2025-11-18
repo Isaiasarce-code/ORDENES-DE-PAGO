@@ -25,8 +25,7 @@ if st.button("Generar imagen"):
         draw.text((50, 80), f"Nombre: {nombre}", font=font, fill="black")
         draw.text((50, 120), "Convenio SIT: 1215442", font=font, fill="black")
         draw.text((50, 160), f"Concepto: {concepto}", font=font, fill="black")
-        draw.text((50, 160), f"Referencia: {concepto}", font=font, fill="black")
-        draw.text((50, 200), "TEF", font=font, fill="black")
+        draw.text((50, 200), f"Referencia: {concepto}", font=font, fill="black")
         draw.text((50, 240), f"{monto}", font=font, fill="black")
         draw.text((50, 280), "*Favor de llevar su identificación oficial*", font=font, fill="black")
 
